@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respon</title>
+</head>
+<style>
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: burlywood;
+    margin: 0px;
+}
+#nav a{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+#nav a:hover{
+    background-color: lightgrey;
+    color: black;
+}
+#nav a.selected{
+    background-color: lightgreen;
+    color: black;
+}
+#nav #ham{
+        display: none;
+}
+#nav #menu{
+    display: block;
+}
+#nav #menu.show{
+    display: block;
+}
+#nav{
+    position: relative;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#main{
+    width: 90%;
+    margin: 0px auto;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+#d1, #d2, #d3{
+    width: 33%;
+    border: 1px solid lightgrey;
+    text-align: center;
+    padding: 5px;
+}
+#row{
+    display: flex;
+}
+img{
+    width: 100%;
+}
+.kepek{
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width: 1200px){
+    body{
+        background-color: lightpink;
+    }
+    #d1, #d2{
+        flex-wrap: wrap;
+        width: 50%;
+        border: 1px solid lightgrey;
+        text-align: center;
+        padding: 5px;
+    }
+    #d3{
+        flex-wrap: wrap;
+        width: 100%;
+        border: 1px solid lightgrey;
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 900px){
+    body{
+        background-color: lightseagreen;
+    }
+    #nav #ham{
+        display: inline-block;
+    }
+    #nav #menu{
+        display: none;
+    }
+    #nav #menu.show{
+        display: block;
+        position: a;
+    }
+    #nav #menu.show a{
+        display: block;
+    }
+    #row{
+        display: block;
+    }
+    #d1, #d2, #d3{
+    width: 100%;
+    border: 1px solid lightgrey;
+    text-align: center;
+    padding: 5px;
+}
+
+}
+
+
+</style>
+
+<script>
+    function menu(){
+        let m = document.getElementById("menu");
+        if (m.className==="") m.className = "show"; else m.className="";
+    }
+</script>
+<body>
+
+    <div id="nav">
+        <a href="#" id="ham" onclick="menu();">&#9776;</a>
+        <div id="menu" class="">
+            <a href="#" class="selected">Kezdőlap</a>
+            <a href="#">Szabályok</a>
+            <a href="#">Játék1</a>
+            <a href="#">Játék2</a>
+            <a href="#">Játék3</a>
+            <a href="#">Játék4</a>
+            <a href="#" >Játék</a>
+            <a href="#nevjegy" >Névjegy</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="row">
+            <div id="d1">Szöveg</div>
+            <div id="d2">Szöveg</div>
+            <div id="d3">Szöveg</div>
+        </div>
+        <img src="sun.jpg" alt="">
+        <div class="kepek">
+            <div><img src="sun1.jpg" alt=""></div>
+            <div><img src="sun1.jpg" alt=""></div>
+            <div><img src="sun1.jpg" alt=""></div>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aliquid dignissimos nostrum earum atque rem, a dicta soluta quod ipsa, asperiores maiores distinctio, nesciunt cupiditate? Officia eum nulla alias fugit!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum doloremque nihil eos laudantium saepe vero natus adipisci cumque earum rerum dolorum soluta nisi nam, nostrum quam? Laudantium aliquid voluptate molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum vel praesentium maiores dolor cupiditate, sequi facilis iusto laborum commodi voluptate assumenda itaque recusandae officiis nobis porro eaque.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, voluptatum distinctio facilis quam voluptas temporibus error harum dolor aliquam, ea dolores rem quae magni veritatis nulla vero corporis nostrum! Dignissimos.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, aspernatur. Quo, eos tenetur! Iure ratione est, totam quam magni obcaecati eos id. Deleniti praesentium provident voluptas ipsum quae accusamus velit?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aliquid dignissimos nostrum earum atque rem, a dicta soluta quod ipsa, asperiores maiores distinctio, nesciunt cupiditate? Officia eum nulla alias fugit!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum doloremque nihil eos laudantium saepe vero natus adipisci cumque earum rerum dolorum soluta nisi nam, nostrum quam? Laudantium aliquid voluptate molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum vel praesentium maiores dolor cupiditate, sequi facilis iusto laborum commodi voluptate assumenda itaque recusandae officiis nobis porro eaque.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, voluptatum distinctio facilis quam voluptas temporibus error harum dolor aliquam, ea dolores rem quae magni veritatis nulla vero corporis nostrum! Dignissimos.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, aspernatur. Quo, eos tenetur! Iure ratione est, totam quam magni obcaecati eos id. Deleniti praesentium provident voluptas ipsum quae accusamus velit?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aliquid dignissimos nostrum earum atque rem, a dicta soluta quod ipsa, asperiores maiores distinctio, nesciunt cupiditate? Officia eum nulla alias fugit!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum doloremque nihil eos laudantium saepe vero natus adipisci cumque earum rerum dolorum soluta nisi nam, nostrum quam? Laudantium aliquid voluptate molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum vel praesentium maiores dolor cupiditate, sequi facilis iusto laborum commodi voluptate assumenda itaque recusandae officiis nobis porro eaque.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, voluptatum distinctio facilis quam voluptas temporibus error harum dolor aliquam, ea dolores rem quae magni veritatis nulla vero corporis nostrum! Dignissimos.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, aspernatur. Quo, eos tenetur! Iure ratione est, totam quam magni obcaecati eos id. Deleniti praesentium provident voluptas ipsum quae accusamus velit?</p>
+        </div>
+        <a name="nevjegy"></a>
+        <div>
+            <p>Készítette: 12/A 2024.05.17.</p>
+        </div>
+    </div>
+</body>
+</html>
